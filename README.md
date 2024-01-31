@@ -1,3 +1,30 @@
+## Application Setup
+1. Install Python (3.12) 
+2. Clone this repo, cd to ct_assignment
+3. Create and activate virtual environment
+    
+    Run below commands in cmd/terminal:
+
+    `python -m venv vevn`
+
+    `venv\Scripts\activate`
+
+4. Install required packages
+
+    `pip install -r requirements.txt`
+
+5. Run Flask App
+
+    `python app.py`
+
+6. Application will start running on http://127.0.0.1:5000,
+    
+## Setup database
+
+sqlite
+## API's
+
+
 1. register user
 POST:  http://127.0.0.1:5000/api/auth/register
 Payload: {
@@ -92,4 +119,9 @@ POST: http://127.0.0.1:5000/api/student
         }
     ]
 }
+
+3. Get student with ID (without course)
+GET: http://127.0.0.1:5000/api/student/1
+
+4. 
 

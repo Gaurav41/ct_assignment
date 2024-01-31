@@ -1,0 +1,42 @@
+Add a Course [Name, Professor Name, Description]
+POST: http://127.0.0.1:5000/api/course
+Body:
+{
+    "course_name":"js3",
+    "professor_name":"ccs",
+    "description":"some description"
+}
+
+GET course:
+GET: http://127.0.0.1:5000/api/courses
+
+
+Add a student [Name, Email, Phone]
+POST: http://127.0.0.1:5000/api/student
+Body: {
+    "name":"akshay",
+    "email": "ak@gmail.com",
+    "phone": 9770529063
+}
+
+
+Allocate a student to one or more Course
+POST: http://127.0.0.1:5000/api/course/assign
+Body: {
+    "course_id":2,
+    "student_id":3
+}
+
+
+List Students [Name, Email, Phone, Course Enrolled (comma separated string)]
+GET: http://127.0.0.1:5000/api/students
+
+
+Delete a given Course
+DELETE: http://127.0.0.1:5000/api/course/<course_id>
+eg: http://127.0.0.1:5000/api/course/3
+
+
+Should be Get a student’s data for a given Course 
+GET: http://127.0.0.1:5000/api/course/<course_id>/students
+eg: http://127.0.0.1:5000/api/course/3/students

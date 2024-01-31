@@ -18,15 +18,24 @@
     `python app.py`
 
 6. Application will start running on http://127.0.0.1:5000,
-    
+
+## Set env variable
+Create .env file in root directory and add 'SECRET_KEY' inside it.
+
+generate a random secret key
+
+    import secrets
+    secrets.token_hex(16)
+
 ## Setup database
 
-    Run following commands in cmd to setup sqlite database
-    >`flask shell`
-    it will open flask shell
-    To create all tables, run
-    >`from myapp import db`
-    >'db.create_all()`
+Run following commands in cmd to setup sqlite database
+    
+    flask shell
+it will open start interactive flask shell,To create all tables, run
+        
+        from myapp import db
+        db.create_all()
 
 ## API's
 
@@ -99,7 +108,7 @@ POST: http://127.0.0.1:5000/api/students/<'stu_id'>/assign_course
 
 assign course 1,2 to student whose 1
 
-#### 1. Students
+#### 3. Students
 1. Add Students
 POST: http://127.0.0.1:5000/api/student
 
